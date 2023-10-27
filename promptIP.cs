@@ -4,16 +4,7 @@ using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Reflection.Metadata;
 using System.ComponentModel;
-using System.Linq
-
-
-
-
-
-
-
-
-;
+using System.Linq;
 class PromptIP
 {
     static void Main()

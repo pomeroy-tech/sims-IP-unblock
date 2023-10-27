@@ -9,7 +9,7 @@ using System.ComponentModel;
 class FetchIP
 {
 
-    static void Main()
+    public static void Main()
     {
         
         DateTime currentDateTime = DateTime.Now;

@@ -10,5 +10,6 @@
     <SelfContainedApp>True</SelfContainedApp>
     <PublishSingleFile>True</PublishSingleFile>
     <BuildSingleFile>True</BuildSingleFile>
+    <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
 </Project>

@@ -1,0 +1,45 @@
+{
+    "event":
+    {
+      "time": "2023-10-27 09:45:34.117518 -0400",
+      "app": "BvSshServer 9.31",
+      "type": "Info",
+      "name": "I_LOGON_AUTH_COMPLETED",
+      "desc": "User authentication completed successfully.",
+      "conn":
+      {
+        "id": 1146,
+        "winSesId": "C1137",
+        "service": "SSH",
+        "remoteAddress": "108.193.86.59:45462",
+        "loc": "US\/NA",
+        "windowsAccount": "PMRY\\johns",
+        "userPrincipalName": "scott.john@pomeroy.com",
+        "winSes": "existing"
+      },
+      "authentication":
+      {
+        "attemptNr": 1,
+        "serialize": "completion",
+        "userName": "johns",
+        "method": "keyboard-interactive",
+        "submethod": "Password"
+      },
+      "parameters":
+      {
+        "groupSettings": "pmry\\SIMS_IP_Unblock",
+        "otherGroups": "(Everyone)",
+        "tokenType": "LogonUserPwd",
+        "tokenLogonType": "Interactive",
+        "tokenElevation": "Restricted",
+        "domainController": "\\\\awsmsdcw02.pomeroy.msft",
+        "domainControllerFunctionality": "Windows 2016 Server",
+        "domainFunctionality": "Windows 2016 Server",
+        "winSesUsesActive": 1,
+        "winSesUsesCumul": 9,
+        "winSesAgeSecs": 5688
+      }
+    }
+  }
+  
+  
