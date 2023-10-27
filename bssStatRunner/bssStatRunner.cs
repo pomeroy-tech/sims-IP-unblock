@@ -18,6 +18,10 @@ public static String installloc;
     static void Main()
     {
         installloc = (AppDomain.CurrentDomain.BaseDirectory).Remove((AppDomain.CurrentDomain.BaseDirectory).Length-4);
+        var props = new Dictionary<string, string>();
+        char[] eq = {'='};
+        foreach (string line in (File.ReadAllLines($"{installloc}\\conf\\bssStatRunner.properties")))
+            props.Add((line.Split(eq, StringSplitOptions.None)[0]), (line.Split(eq, StringSplitOptions.None)[1]));
         String eventjson = Environment.GetEnvironmentVariable("SSHLOGEVENT");
         //FileLogger(eventjson, "MAIN");
         disconnect = false;
@@ -26,6 +30,7 @@ public static String installloc;
         aTimer.Interval=300000;
         aTimer.Enabled=true;
         DateTime currentDateTime = DateTime.Now;
+        RotateLogs(Int32.Parse(props["Days_to_Keep_Logs"]));
         try
         {
             var sshlog = JsonSerializer.Deserialize<Dictionary<string, object>>(eventjson);
@@ -58,6 +63,20 @@ public static String installloc;
         while (!(disconnect));
     }
 
+    private static void RotateLogs(int days)
+    {
+        FileLogger($"Rotating Logs older than {days} days old", "ROTATELOGS");
+        string[] files = Directory.GetFiles($"{installloc}\\Logs");
+        foreach (string file in files)
+        {
+            if (DateTime.Compare(File.GetCreationTime(file), DateTime.Now.Subtract(TimeSpan.FromDays(days))) <= 0 )
+            {
+                File.Delete(file);
+                FileLogger($"Deleting:  {file}", "ROTATELOGS");
+            }
+
+        }
+    }
     private static void OnTimedEvent(object source, ElapsedEventArgs e)
     {
         FileLogger("Timer Expired Disconnecting", "ONTIMEDEVENT");

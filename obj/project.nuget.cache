@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "a5tPGvUWEW1VUUl3B4zTn8vrfhULSRFUk7R7HG6+2ptuMbKryY7sN9dPVI1+tJ9dgbnGnYm8Z41o8kpkIbbSng==",
+  "success": true,
+  "projectFilePath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/promptIP.csproj",
+  "expectedPackageFiles": [
+    "/home/johns/.nuget/packages/microsoft.netcore.app.runtime.win-x64/7.0.12/microsoft.netcore.app.runtime.win-x64.7.0.12.nupkg.sha512",
+    "/home/johns/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/7.0.12/microsoft.aspnetcore.app.runtime.win-x64.7.0.12.nupkg.sha512",
+    "/home/johns/.nuget/packages/microsoft.netcore.app.host.win-x64/7.0.12/microsoft.netcore.app.host.win-x64.7.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
