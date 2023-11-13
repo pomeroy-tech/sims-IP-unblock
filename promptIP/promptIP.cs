@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Threading;
+using System.Timers;
 class PromptIP
 {
 public static FileSystemWatcher watcher;
@@ -18,6 +19,10 @@ public static String installloc;
     static void Main()
     {
         disconnect = false;
+        aTimer = new System.Timers.Timer();
+        aTimer.Elapsed+=new ElapsedEventHandler(OnTimedEvent);
+        aTimer.Interval=300000;
+        aTimer.Enabled=true;
         string ipAddress;
         installloc = (AppDomain.CurrentDomain.BaseDirectory).Remove((AppDomain.CurrentDomain.BaseDirectory).Length-4);
         string curUser = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
@@ -30,17 +35,17 @@ public static String installloc;
         do
         {
             string response;
-            foreach (string file in Directory.GetFiles($"{installloc}\\temp"))
+            foreach (string respfile in Directory.GetFiles($"{installloc}\\temp"))
             {
-                if (file == $"{installloc}\\temp\\{User}.response")
+                if (respfile == $"{installloc}\\temp\\{User}.response")
                 {
-                    response = File.ReadAllText(file);
+                    response = File.ReadAllText(respfile);
                     if (String.Equals(response, @"timeout", StringComparison.OrdinalIgnoreCase))
                     {
                         FileLogger($"{User} backend has timedout -- Disconnecting", "BackendResponse");
                         Console.WriteLine("Your Session has timed out this SSH session will disconnect in 5 seconds");
                         Thread.Sleep(5000);
-                        File.Delete(file);
+                        File.Delete(respfile);
                         disconnect = true;
                         break;
                     }
@@ -144,6 +149,23 @@ public static String installloc;
         }
         ;
     }
+    private static void OnTimedEvent(object source, ElapsedEventArgs e)
+    {
+        FileLogger("Timer Expired Disconnecting", "ONTIMEDEVENT");
+        DropConnection();
+        disconnect = true;
+        FileLogger($"Time Expired for ${User}", "ONTIMEDEVENT");
+        FileLogger($"END EXECUTION for ${User}", "ONTIMEDEVENT");
+        foreach (string file in Directory.GetFiles($"{installloc}\\temp"))
+        {
+            if (file == $"{installloc}\\temp\\{User}.*")
+            {
+                FileLogger($"Deleting Leftover file -- {file}", "ONTIMEDEVENT");
+                File.Delete(file);
+            }
+        }
+        Environment.Exit(0);
+    }
 
     static string GetBlockedIpAddresses()
     {
@@ -159,7 +181,7 @@ public static String installloc;
             {
                 if (File.Exists($"{installloc}\\temp\\{User}.fetch"))
                 {
-                    
+                    Thread.Sleep(3000);
                     output = File.ReadAllText($"{installloc}\\temp\\{User}.fetch");
                     File.Delete($"{installloc}\\temp\\{User}.fetch");
                 }
@@ -185,13 +207,13 @@ public static String installloc;
                 bye.Write("quit");
             }
             Console.WriteLine("Command executed successfully.");
-            FileLogger("Command executed successfully.", "DROPCONNECTION");
+            FileLogger("Wrote Drop Connection Command.", "DROPCONNECTION");
             
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error running the command: {ex.Message}");
-            FileLogger($"Error running the command: {ex.Message}", "DROPCONNECTION");
+            FileLogger($"Error Writing Drop Connection Command: {ex.Message}", "DROPCONNECTION");
         }
 
     }

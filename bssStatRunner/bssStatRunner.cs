@@ -66,6 +66,8 @@ public static String installloc;
              response.WriteLine("timeout");
              response.Close();
         }
+        FileLogger($"Wrote Disconnect File for ${User}", "MAIN");
+        FileLogger($"END EXECUTION for ${User}", "MAIN");
     }
 
     private static void RotateLogs(int days)
