@@ -1,0 +1,80 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/fetchIP.csproj": {}
+  },
+  "projects": {
+    "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/fetchIP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/fetchIP.csproj",
+        "projectName": "fetchIP",
+        "projectPath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/fetchIP.csproj",
+        "packagesPath": "/home/johns/.nuget/packages/",
+        "outputPath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/johns/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[7.0.13, 7.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.13, 7.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[7.0.13, 7.0.13]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win10-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

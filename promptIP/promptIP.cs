@@ -26,8 +26,26 @@ public static String installloc;
         userSplit = (curUser.Split(delim, StringSplitOptions.None)).Skip(1).ToArray();
         User = userSplit[0];
         FileLogger($"**********Login: {curUser} *************", "MAIN");
+        
         do
         {
+            string response;
+            foreach (string file in Directory.GetFiles($"{installloc}\\temp"))
+            {
+                if (file == $"{installloc}\\temp\\{User}.response")
+                {
+                    response = File.ReadAllText(file);
+                    if (String.Equals(response, @"timeout", StringComparison.OrdinalIgnoreCase))
+                    {
+                        FileLogger($"{User} backend has timedout -- Disconnecting", "BackendResponse");
+                        Console.WriteLine("Your Session has timed out this SSH session will disconnect in 5 seconds");
+                        Thread.Sleep(5000);
+                        File.Delete(file);
+                        disconnect = true;
+                        break;
+                    }
+                }
+            }
             Console.WriteLine("These IP's are currently blocked");
             Console.WriteLine(GetBlockedIpAddresses());
             Console.WriteLine("Enter an IP address to unblock or type quit to exit or r to refresh: ");
@@ -58,8 +76,7 @@ public static String installloc;
         }
         while (!(disconnect));
         FileLogger($"**********DISCONNECT: {curUser} *************", "MAIN");
-        string[] files = Directory.GetFiles($"{installloc}\\temp");
-        foreach (string file in files)
+        foreach (string file in Directory.GetFiles($"{installloc}\\temp"))
         {
             if (file == $"{installloc}\\temp\\{User}.*")
             {
@@ -108,7 +125,7 @@ public static String installloc;
             {
                 if (File.Exists($"{installloc}\\temp\\{User}.fetch"))
                 {
-                    Thread.Sleep(2000);
+                    Thread.Sleep(4000);
                     output = File.ReadAllText($"{installloc}\\temp\\{User}.unblock");
                     File.Delete($"{installloc}\\temp\\{User}.unblock");
                 }

@@ -1,0 +1,2 @@
+/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/bssStatRunner/bin/Debug/net7.0/win10-x64/publish/bssStatRunner.pdb
+/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/bssStatRunner/bin/Debug/net7.0/win10-x64/publish/bssStatRunner.exe

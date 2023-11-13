@@ -2,7 +2,6 @@
   "version": 3,
   "targets": {
     "net7.0": {},
-    "net7.0/win-x64": {},
     "net7.0/win10-x64": {}
   },
   "libraries": {},
@@ -59,15 +58,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[7.0.12, 7.0.12]"
+            "version": "[7.0.13, 7.0.13]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.12, 7.0.12]"
+            "version": "[7.0.13, 7.0.13]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[7.0.12, 7.0.12]"
+            "version": "[7.0.13, 7.0.13]"
           }
         ],
         "frameworkReferences": {
@@ -75,13 +74,10 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
-      "win-x64": {
-        "#import": []
-      },
       "win10-x64": {
         "#import": []
       }

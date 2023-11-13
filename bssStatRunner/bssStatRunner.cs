@@ -61,13 +61,17 @@ public static String installloc;
             Thread.Sleep(2000);
         }
         while (!(disconnect));
+        using (StreamWriter response = new StreamWriter($"{installloc}\\temp\\{User}.response"))
+        {
+             response.WriteLine("timeout");
+             response.Close();
+        }
     }
 
     private static void RotateLogs(int days)
     {
         FileLogger($"Rotating Logs older than {days} days old", "ROTATELOGS");
-        string[] files = Directory.GetFiles($"{installloc}\\Logs");
-        foreach (string file in files)
+        foreach (string file in Directory.GetFiles($"{installloc}\\Logs"))
         {
             if (DateTime.Compare(File.GetCreationTime(file), DateTime.Now.Subtract(TimeSpan.FromDays(days))) <= 0 )
             {
@@ -85,8 +89,7 @@ public static String installloc;
     private static void QueryForCommand()
     {
         string command;
-        string[] files = Directory.GetFiles($"{installloc}\\temp");
-        foreach (string file in files)
+        foreach (string file in Directory.GetFiles($"{installloc}\\temp"))
         {
             if (file == $"{installloc}\\temp\\{User}.command")
             {

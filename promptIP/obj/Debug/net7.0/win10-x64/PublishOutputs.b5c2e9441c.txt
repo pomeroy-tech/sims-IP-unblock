@@ -1,0 +1,2 @@
+/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/promptIP/bin/Debug/net7.0/win10-x64/publish/promptIP.pdb
+/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/promptIP/bin/Debug/net7.0/win10-x64/publish/promptIP.exe
