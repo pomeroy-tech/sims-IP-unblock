@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mlO/sSjL0RT4RCDLWyugV9wnrmqmL3XUAamAdtSVhG8Hw4hsniczZT/Qe6PayXbu25ggZS5quId9DSIsOsJvEQ==",
+  "dgSpecHash": "GK6Ft7vDhcnp76j2M8ps/XztECaxLMNHH84Uy5BdLTsCia+zjsbdRz3rbj2j3TmhCBMJ5ja6yCgA8NLyQPLgzg==",
   "success": true,
   "projectFilePath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/fetchIP.csproj",
   "expectedPackageFiles": [
-    "/home/johns/.nuget/packages/microsoft.netcore.app.runtime.win-x64/7.0.13/microsoft.netcore.app.runtime.win-x64.7.0.13.nupkg.sha512",
-    "/home/johns/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/7.0.13/microsoft.aspnetcore.app.runtime.win-x64.7.0.13.nupkg.sha512",
-    "/home/johns/.nuget/packages/microsoft.netcore.app.host.win-x64/7.0.13/microsoft.netcore.app.host.win-x64.7.0.13.nupkg.sha512"
+    "/home/johns/.nuget/packages/microsoft.netcore.app.runtime.win-x64/7.0.14/microsoft.netcore.app.runtime.win-x64.7.0.14.nupkg.sha512",
+    "/home/johns/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/7.0.14/microsoft.aspnetcore.app.runtime.win-x64.7.0.14.nupkg.sha512",
+    "/home/johns/.nuget/packages/microsoft.netcore.app.host.win-x64/7.0.14/microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }
