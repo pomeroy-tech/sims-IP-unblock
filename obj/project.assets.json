@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/fetchIP.csproj",
-      "projectName": "fetchIP",
-      "projectPath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/fetchIP.csproj",
+      "projectUniqueName": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/unblockIP.csproj",
+      "projectName": "unblockIP",
+      "projectPath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/unblockIP.csproj",
       "packagesPath": "/home/johns/.nuget/packages/",
       "outputPath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/obj/",
       "projectStyle": "PackageReference",

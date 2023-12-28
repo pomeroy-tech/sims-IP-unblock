@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/promptIP.csproj": {}
+    "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/unblockIP.csproj": {}
   },
   "projects": {
-    "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/promptIP.csproj": {
+    "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/unblockIP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/promptIP.csproj",
-        "projectName": "promptIP",
-        "projectPath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/promptIP.csproj",
+        "projectUniqueName": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/unblockIP.csproj",
+        "projectName": "unblockIP",
+        "projectPath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/unblockIP.csproj",
         "packagesPath": "/home/johns/.nuget/packages/",
         "outputPath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/obj/",
         "projectStyle": "PackageReference",

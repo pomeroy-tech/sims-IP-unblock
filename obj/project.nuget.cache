@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GK6Ft7vDhcnp76j2M8ps/XztECaxLMNHH84Uy5BdLTsCia+zjsbdRz3rbj2j3TmhCBMJ5ja6yCgA8NLyQPLgzg==",
+  "dgSpecHash": "i7LPo5Epiq/nlq00e9fNro7gDRGysy/4LepREwNGUixIBsMRoALMDt2UCRGWwfIg6NVsxZJpqxQf8pWTbefCkQ==",
   "success": true,
-  "projectFilePath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/fetchIP.csproj",
+  "projectFilePath": "/home/johns/Nextcloud/Pomeroy/git/sims-IP-unblock/unblockIP.csproj",
   "expectedPackageFiles": [
     "/home/johns/.nuget/packages/microsoft.netcore.app.runtime.win-x64/7.0.14/microsoft.netcore.app.runtime.win-x64.7.0.14.nupkg.sha512",
     "/home/johns/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/7.0.14/microsoft.aspnetcore.app.runtime.win-x64.7.0.14.nupkg.sha512",
